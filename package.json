@@ -1,0 +1,19 @@
+{
+  "name": "hapi_web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dindin-api": "^2.0.1",
+    "handlebars": "^4.0.6",
+    "hapi": "^13.5.3",
+    "inert": "^3.2.1",
+    "vision": "^4.1.1",
+    "wreck": "^7.2.1"
+  }
+}
