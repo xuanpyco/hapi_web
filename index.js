@@ -13,7 +13,8 @@ server.bind({
 server.register([
     require ('dindin-api'),
     require ('inert'),
-    require('vision')
+    require('vision'),
+    require('hapi-auth-cookie')
 ], (err) => {
 
     if (err) {
@@ -31,6 +32,10 @@ server.register([
         partialsPath: './views/partials',
         helpersPath: './views/helpers'
     });
+    server.auth.strategy('session', 'cookie', 'try', {
+        password: 'jflsdjfjsldkfjsdlkfjlsdfjlsdjflsdfljsdfew',
+        isSecure: false
+    })
     server.route(require('./routes'));
     server.start (() => {
         console.log('Started server at ', server.info.uri);
